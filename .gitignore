@@ -1,0 +1,25 @@
+# Logs
+React-Projects/**/logs/
+React-Projects/**/logs/*.log
+React-Projects/**/npm-debug.log*
+React-Projects/**/yarn-debug.log*
+React-Projects/**/yarn-error.log*
+React-Projects/**/pnpm-debug.log*
+React-Projects/**/lerna-debug.log*
+
+# node_modules e diretórios de build
+React-Projects/**/node_modules/
+React-Projects/**/dist/
+React-Projects/**/dist-ssr/
+React-Projects/**/*.local
+
+# Arquivos e pastas de configuração de editores
+React-Projects/**/.vscode/*
+!React-Projects/**/.vscode/extensions.json
+React-Projects/**/.idea/
+React-Projects/**/.DS_Store
+React-Projects/**/*.suo
+React-Projects/**/*.ntvs*
+React-Projects/**/*.njsproj
+React-Projects/**/*.sln
+React-Projects/**/*.sw?
