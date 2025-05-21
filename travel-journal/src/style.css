@@ -28,66 +28,75 @@ header > h1 {
 
 main {
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    flex-wrap: wrap;
     justify-content: center;
-    margin-top: 50px;
+    padding-top: 30px;
 }
 
-.entry {
+article.journal-entry {
     display: flex;
-    width: 600px;
-    gap: 20px;
-}
-
-.entry > img {
-    width: 412px;
-    height: 200px;
+    margin-bottom: 36px;
+    width: 500px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    padding: 20px;
     border-radius: 10px;
 }
 
-.entry > section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
+article.journal-entry:hover {
+    transform: scale(1.05);
+    background-color: rgb(233, 233, 233);
 }
 
-.entry > section > .header {
-
+article.journal-entry .marker {
+    width: 7px;
+    margin-right: 4px;
 }
 
-.header > .location {
+article.journal-entry .main-image-container {
+    width: 125px;
+    height: 168px;
+    overflow: hidden;
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-right: 19px;
+}
+
+article.journal-entry .main-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.info-container span.country {
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 0.7rem;
+    margin-right: 12px;
 }
 
-.location > img {
-    height: 15px;
-    margin-right: 5px;
+.info-container a {
+    color: #2B283A;
+    font-size: 0.7rem;
 }
 
-.location > a {
-    text-transform: none;
-    margin-left: 5px;
-    color: gray;
+.info-container a:visited {
+    color: #918E9B;
+}
+
+.info-container h2.entry-title {
+    margin-top: 7px;
+    margin-bottom: 17px;
+}
+
+.info-container p.trip-dates {
+    font-weight: bold;
+}
+
+.info-container p.entry-text {
+    line-height: 1.5;
     font-size: 0.8rem;
-}
-
-.header > .title {
-    margin-top: 5px;
-}
-
-.entry > section > .content {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.content > h3 {
-    font-size: 1rem;
-}
-
-.content > p {
-    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
 }
