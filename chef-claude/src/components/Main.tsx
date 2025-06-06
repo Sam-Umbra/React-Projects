@@ -4,17 +4,18 @@ import ClaudeRecipe from "./ClaudeRecipe";
 import { getRecipeFromMistral } from "../ai";
 
 export default function Main() {
-  const [ingredients, setIngredients] = useState<any[]>([
+  const [ingredients, setIngredients] = useState<string[]>([
     "all the main spices",
     "pasta",
     "ground beef",
     "tomato paste",
   ]);
+
   const [recipe, setRecipe] = useState<string | undefined>("");
 
   function addIngredient(formData: FormData) {
     const newIngredient = formData.get("ingredient");
-    setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
+    setIngredients((prevIngredients) => [...prevIngredients, newIngredient as string]);
   }
 
   async function getRecipe() {
@@ -43,7 +44,7 @@ export default function Main() {
         />
       )}
 
-      {recipe && <ClaudeRecipe recipe={recipe}/>}
+      {recipe && <ClaudeRecipe recipe={recipe} />}
     </main>
   );
 }
