@@ -1,11 +1,11 @@
 type IngredientsListProps = {
   ingredients: string[];
-  toggleRecipeShown: () => void;
+  getRecipe: () => Promise<void>;
 };
 
 export default function IngredientsList({
   ingredients,
-  toggleRecipeShown,
+  getRecipe,
 }: IngredientsListProps) {
 
   const ingredientsListItems = ingredients.map((ingredient) => (
@@ -24,7 +24,7 @@ export default function IngredientsList({
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
           </div>
-          <button onClick={toggleRecipeShown}>Get a recipe</button>
+          <button onClick={getRecipe}>Get a recipe</button>
         </div>
       )}
     </section>
